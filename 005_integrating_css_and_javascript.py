@@ -3,7 +3,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return render_template('submit.html')
+    return render_template('submitcss.html')
 
 @app.route('/submit',methods=["POST","GET"])
 def submit():
@@ -13,7 +13,7 @@ def submit():
         res = "PASSED"
     else:
         res = "FAILED"
-    return render_template("result.html",result=res,marks=avg)
+    return render_template("resultjs.html",result=res,marks=avg)
 
 if __name__ == "__main__":
     app.run(debug=True)
